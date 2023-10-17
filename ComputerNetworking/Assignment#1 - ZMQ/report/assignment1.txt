@@ -1,0 +1,96 @@
+Assignment #1
+Assignment #1
+
+=================
+
+
+
+A. Description: 
+
+-------------------------------
+
+Chapter 8 - Caches and Message Queues, Listing 8-3 [1] shows a ØMQ messaging fabric linking five different workers. Here, we have created a simple example that emulates a topology of five different worker nodes. The topology is shown in Figure 8-1. Since all five workers run on localhost (127.0.0.1), the example is self-contained. We have used a thread for each socket for communication since it is not safe for two threads to share the same single messaging socket. In this assignment, your task is to implement programs for each worker that runs on different nodes. Also, implement a new node, named "client", that that interfaces with a user. "client" starts the messaging topology by prompting a user to enter the number of data points and later receives data from the "tally" to plot the changes in the pi value in real-time. The specification of the program is detailed in the next section. 
+
+
+
+B. Specification: 
+
+-------------------------------
+
+1. Input:
+
+- "client" asks the user the desired number of data points N. Then, "client" sends a message to the "bitsource" to generate N data points.
+
+2. Method: 
+
+- Implement a program to run six individual workers on different computers.
+
+- Your programs should be based on Listing 8-3.
+
+- Specify the socket types for communication between "client-bitsource" and "client-tally". Explain your choice. 
+
+3. Output:
+
+- "client" receives (x-axis: number of iterations, y-axis: pi value) from "tally" and plots the changes in pi value in real-time. 
+
+- Present test cases using multiple computers (or multiple terminals on a local machine). 
+
+
+
+C. Deliverables: 
+
+-------------------------------
+
+- Due: May 21, 2021. 
+
+- Compress the following files in a zip format. 
+
+1. Python codes (file format: .py): Include comments. 
+
+2. Software architecture documentation (file format: .pdf): Includes high-level design, logical view, process view, test cases, etc. Length < 4 pages. Some good examples are given in [3, 4].
+
+- (IMPORTANT) Submit a zip file named with your student ID (e.g., 199809734.zip). 
+
+
+
+D. Evaluation Criteria: 
+
+-------------------------------
+
+1. Program Style (20%)
+
+- Organization: Creates effective top-down decomposition of algorithms and highly cohesive routines. 
+
+- Comments: Provides user-friendly descriptions to follow the program.
+
+- Readability: Uses effective class, definition, method, and variable names. Code layout should be readable and consistent. 
+
+2. Program Function (50%)
+
+- Completeness: Implements functions listed in the specification correctly. 
+
+3. Program Execution and Documentation (30%)
+
+- Software Architecture Document: Provides a well-organized and detailed document. 
+
+- Demonstration: Provides good test cases. They are included in the software architecture document. 
+
+- Exception Handling: Considers possible cases of exceptions.
+
+- Deliverables: Contains files with instructed file-formats names. 
+
+
+
+E. References: 
+
+-------------------------------
+
+[1] Source code for Listing 8-3. URL: https://github.com/brandon-rhodes/fopnp/blob/m/py3/chapter08/queuepi.py
+
+[2] PyZMQ Documentation: URL: https://pyzmq.readthedocs.io/en/latest/
+
+[3] http://www.se.rit.edu/~co-operators/SoftwareArchitectureDocumentation.pdf
+
+[4] https://sceweb.uhcl.edu/helm/RationalUnifiedProcess/process/modguide/md_sad.htm
+
+[5] https://sceweb.uhcl.edu/helm/RationalUnifiedProcess/examples/csports/ex_sad.htm

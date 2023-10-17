@@ -1,0 +1,39 @@
+Assignment #2 - Conventional Cryptography Systems, Basic Mathematics for Cryptography
+
+Total: 15 points
+
+Q1. (1 point) Secure Hash Algorithm (SHA) is one kind of popular hash function, where SHA-256, SHA-384, and SHA-512 algorithms can produce the hash values with 256, 384, and 512 bits in length, respectively. Please explain why we usually say SHA-256, SHA-384, and SHA-512 algorithms are designed to match the security of AES with 128, 192, and 256 bits, respectively.
+
+Q2. (1 points) Using the Euclid’s gcd theorem, determine the following: 
+(a) gcd⁡(24140,16762)  
+(b) gcd(4655,12075)
+
+Q3. (2 point) Using the "extended" Euclidean algorithm, find the multiplicative inverse of
+(a) 1234 mod 4321
+(b) 550 mod 1769
+
+Q4. (1 point) Using the Vigenère cipher, encrypt the word “explanation” using the key "leg".
+
+Q5. (2 points) This problem explores using a one-time pad version of the Vigenère cipher. In this scheme, the key is a stream of random numbers between 0 and 26. For example, if the key is 3 19 5..., then the first letter of the plaintext is encrypted with a shift of 3 letters, the second with a shift of 19 letters, the third with a shift of 5 letters, and so on. 
+(a) Encrypt the plaintext “send more money” with the keystream
+9 0 1 7 23 15 21 14 11 11 2 8 9
+(b) Using the ciphertext produced in part (a), find a key so that the ciphertext decrypts to the plaintext “cashnotneeded.”
+
+Q6. (8 points: 4 points for encryption and 4 points for decryption)
+Write a programming code that can encrypt and decrypt using S-AES (Simplified AES) [1]. Test data: A binary plaintext of 0110 1111 0110 1011 encrypted with a binary key of 1010 0111 0011 1011 should give a binary ciphertext of 0000 0111 0011 1000. Decryption should work correspondingly. Provide the code and the execution proof. 
+
+Reference: 
+[1] Musa, A., Schaefer, E., and Wedig, S. 2010. “A Simplified AES Algorithm and Its Linear and Differential Cryptanalysis.” Cryptologia 27(12), 148 – 177. URL: Full Paper (Section 5): http://materias.fi.uba.ar/6669/docs/aes/rijn_simplificado.pdf
+[2] Appendix 5B of Textbook: Simplified AES
+[3] Simple Version: https://www.nku.edu/~christensen/simplified%20AES.pdf
+[4] An Example: https://sandilands.info/sgordon/teaching/reports/simplified-aes-example.pdf
+
+==============
+
+Answers (to some selected questions): 
+
+The purpose of the final answers given below is to help students to check their solutions. They will help you to be better prepared for quizzes and exams. Since the final answers are given, you must submit the entire process of your solution to receive the full score. Obviously, submitting only the answers without the process to these questions will give you zero. 
+
+Q3. Hint: Modular Multiplicative Inverse Calculator - https://planetcalc.com/3311/
+Q5. (a) beokjdmsxzpmh
+Q6. Another test data: key - 1010 0111 0011 1011, plaintext - 0110 1110 0110 1011 ("ok" in ASCII"), ciphertext - 0000 0111 0011 1000. 
